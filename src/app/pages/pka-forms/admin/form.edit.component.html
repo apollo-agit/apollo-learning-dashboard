@@ -1,0 +1,29 @@
+<button md-fab md-icon-button [mdMenuTriggerFor]="menu">
+    <md-icon>add circle</md-icon>
+</button>
+<md-menu #menu="mdMenu">
+    <button md-menu-item (click)="onTextBoxAdd()">
+        <md-icon>short_text</md-icon>
+        <span> Add Text Box </span>
+    </button>
+    <button md-menu-item (click)="onTextAreaAdd()">
+        <md-icon>wrap_text</md-icon>
+        <span> Add Text Area </span>
+    </button>
+    <button md-menu-item (click)="onCheckBoxGroupAdd()">
+        <md-icon>check_box</md-icon>
+        <span> Add Check Boxes </span>
+    </button>
+    <button md-menu-item (click)="onOptionListGroupAdd()">
+        <md-icon>radio_button_checked</md-icon>
+        <span> Add Radio Buttons </span>
+    </button>
+</md-menu>
+<div *ngFor="let element of comps | componentsort">
+    <div [ngSwitch]="element.type">
+        <text-area-add *ngSwitchCase="'text-area'" [comp]="element" (change)="textAreaChange($event)" (remove)="elementRemove($event)"></text-area-add>
+        <text-input-add *ngSwitchCase="'text-input'" [comp]="element" (change)="textInputChange($event)" (remove)="elementRemove($event)"></text-input-add>
+        <option-list-add *ngSwitchCase=" 'option-list' " [comp]="element " (change)="optionListChange($event)" (remove)="elementRemove($event)"></option-list-add>
+        <check-box-add *ngSwitchCase=" 'check-box' " [comp]="element" (change)="checkBoxChange($event)" (remove)="elementRemove($event)"></check-box-add>
+    </div>
+</div>

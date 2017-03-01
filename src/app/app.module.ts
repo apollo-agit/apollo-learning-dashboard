@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
+import { MaterialModule } from '@angular/material';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -47,6 +48,7 @@ export type StoreType = {
     ReactiveFormsModule,
     CommonAppModule.forRoot(),
     NgaModule.forRoot(),
+    MaterialModule.forRoot(),
     PagesModule,
     routing
   ],

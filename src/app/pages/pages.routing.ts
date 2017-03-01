@@ -12,12 +12,18 @@ export const routes: Routes = [
     loadChildren: 'app/pages/register/register.module#RegisterModule'
   },
   {
+     path: 'forms-main-component', 
+    loadChildren: 'app/pages/pka-forms/forms.main.module#FormsMainModule' 
+  },
+  {
     path: 'pages',
     component: Pages,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: 'app/pages/dashboard/dashboard.module#DashboardModule' },
-      { path: 'editors', loadChildren: 'app/pages/editors/editors.module#EditorsModule' }
+      { path: 'editors', loadChildren: 'app/pages/editors/editors.module#EditorsModule' },
+      { path: 'forms-main-component', loadChildren: 'app/pages/pka-forms/forms.main.module#FormsMainModule' }
+      
     ]
   }
 ];

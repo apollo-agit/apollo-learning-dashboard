@@ -1,3 +1,6 @@
+// Material Design
+import '@angular/material';
+
 // Angular 2
 import '@angular/platform-browser';
 import '@angular/platform-browser-dynamic';
@@ -19,6 +22,22 @@ import 'jquery';
 import 'bootstrap-loader';
 import 'font-awesome-sass-loader';
 import 'lodash';
+
+
+
+// RxJS
+import 'rxjs';
+
+//Immutable JS
+import 'immutable';
+
+//HammerJS
+import 'hammerjs';
+
+//UUID
+import 'angular2-uuid';
+
+import 'angular2-color-picker';
 
 if ('production' === ENV) {
   // Production

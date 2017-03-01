@@ -89,7 +89,7 @@ module.exports = function (options) {
      */
     module: {
 
-      rules: [
+       rules: [
 
         /*
          * Typescript loader support for .ts
@@ -157,7 +157,11 @@ module.exports = function (options) {
 
         {
           test: /\.scss$/,
-          use: ['raw-loader', 'sass-loader']
+          use: ['raw-loader', { loader: 'sass-loader',
+          options: {
+                    includePaths: ["node_modules/@angular/material/", "node_modules/font-awesome/scss/"]
+                }
+              }]
         },
 
         {

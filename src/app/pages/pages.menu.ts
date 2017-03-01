@@ -77,6 +77,18 @@ export const PAGES_MENU = [
             target: '_blank'
           }
         }
+      },
+      {
+       path: 'forms-main-component',
+        data: {
+          menu: {
+            title: 'PKA Forms',
+            icon: 'ion-android-exit',
+            selected: false,
+            expanded: false,
+            order: 1000,
+          }
+        }
       }
     ]
   }
