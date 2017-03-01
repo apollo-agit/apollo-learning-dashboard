@@ -3,12 +3,12 @@
 
 # TEAM
 
-  akveo.com
+  apolloglobal.edu
 
 # THANKS
 
   <name>
-  Akveo Team
+  Apollo Team
 
 # TECHNOLOGY COLOPHON
 

@@ -11,14 +11,14 @@ import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularcla
 import { ENV_PROVIDERS } from './environment';
 import { routing } from './app.routing';
 
-// App is our top level component
+
 import { App } from './app.component';
 import { AppState, InternalStateType } from './app.service';
 import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
 
-// Application wide providers
+
 const APP_PROVIDERS = [
   AppState,
   GlobalState
@@ -38,7 +38,7 @@ export type StoreType = {
   declarations: [
     App
   ],
-  imports: [ // import Angular's modules
+  imports: [ 
     BrowserModule,
     HttpModule,
     RouterModule,
@@ -48,7 +48,7 @@ export type StoreType = {
     PagesModule,
     routing
   ],
-  providers: [ // expose our Services and Providers into Angular's dependency injection
+  providers: [ 
     ENV_PROVIDERS,
     APP_PROVIDERS
   ]
@@ -76,19 +76,19 @@ export class AppModule {
 
   hmrOnDestroy(store: StoreType) {
     const cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
-    // save state
+
     const state = this.appState._state;
     store.state = state;
-    // recreate root elements
+
     store.disposeOldHosts = createNewHosts(cmpLocation);
-    // save input values
+
     store.restoreInputValues = createInputTransfer();
-    // remove styles
+
     removeNgStyles();
   }
 
   hmrAfterDestroy(store: StoreType) {
-    // display new elements
+
     store.disposeOldHosts();
     delete store.disposeOldHosts;
   }

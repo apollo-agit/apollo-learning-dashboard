@@ -41,14 +41,14 @@ export class App {
   }
 
   public ngAfterViewInit(): void {
-    // hide spinner once all loaders are completed
+
     BaThemePreloader.load().then((values) => {
       this._spinner.hide();
     });
   }
 
   private _loadImages(): void {
-    // register some loaders
+
     BaThemePreloader.registerLoader(this._imageLoader.load(layoutPaths.images.root + 'sky-bg.jpg'));
   }
 
