@@ -9,7 +9,7 @@ import 'style-loader!./pieChart.scss';
   selector: 'pie-chart',
   templateUrl: './pieChart.html'
 })
-// TODO: move easypiechart to component
+
 export class PieChart {
 
   public charts: Array<Object>;

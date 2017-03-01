@@ -2,6 +2,7 @@ import { NgModule }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgaModule } from '../../theme/nga.module';
+import { CommonAppModule } from '../../common/common.app.module';
 
 import { Dashboard } from './dashboard.component';
 import { routing }       from './dashboard.routing';
@@ -25,6 +26,7 @@ import { UsersMapService } from './usersMap/usersMap.service';
 @NgModule({
   imports: [
     CommonModule,
+    CommonAppModule,
     FormsModule,
     NgaModule,
     routing

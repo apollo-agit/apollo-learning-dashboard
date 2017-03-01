@@ -16,6 +16,7 @@ import { App } from './app.component';
 import { AppState, InternalStateType } from './app.service';
 import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
+import { CommonAppModule } from './common/common.app.module';
 import { PagesModule } from './pages/pages.module';
 
 
@@ -44,6 +45,7 @@ export type StoreType = {
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    CommonAppModule.forRoot(),
     NgaModule.forRoot(),
     PagesModule,
     routing

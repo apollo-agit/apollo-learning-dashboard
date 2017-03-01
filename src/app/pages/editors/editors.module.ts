@@ -3,6 +3,7 @@ import { CommonModule }  from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { NgaModule } from '../../theme/nga.module';
+import { CommonAppModule } from '../../common/common.app.module';
 
 import { routing }       from './editors.routing';
 import { Editors } from './editors.component';
@@ -12,6 +13,7 @@ import { Ckeditor } from './components/ckeditor/ckeditor.component';
 @NgModule({
   imports: [
     CommonModule,
+    CommonAppModule,
     FormsModule,
     NgaModule,
     CKEditorModule,
