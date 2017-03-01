@@ -1,5 +1,38 @@
 # apollo-learning-dashboard
-Learning Dashboard for Apollo
+## Learning Dashboard for Apollo
+
+### Summary
+This is a browser functional demonstration of MVW style dashboard and mobile cohesion. All app components are service driven and ready to be introduced to any Microservice server layer. This is a modified boilerplate community project, introducing ...
+
+#### Functional
+* Angular2 MVW Data Driven Forms
+* Single Page User Interaction
+* Webpack build and "chunk" artifact(s)
+* Highly Interactive UI
+** Bootstrap 4.0
+** Material Design (used in PKA-Forms Component)
+** Animate CSS
+** Several Node Packages for Charts, Tables, and Calendars Components
+
+#### Technical
+* Webpack build configuration
+** Complex build lifecycle
+** Vendor and Pollyfill loading
+** Optimized and chunked client side artifact(s)
+** Devlopment\Debug tooling
+** Asset loading and caching
+** Imbeddd development middleware and web server
+* Angular2 component framework
+* Typescript for mature typesafe precompilled language
+* Utilizing both Bootstrap 4 and Material Design
+
+#### Items I Don't Like
+* Not crazy about the base index.html build, could be simplier
+* !! PKA-Forms Material Design not naturally loading as part of Webpack cycle
+** Raw Loader for sass and assets not working well with node-module build-time sass imports
+* Main app components should utilize immutable state tree
+* Should try to utlize community "typings" build instead of custom-typings.d.ts
+
 
 
 ### How to Install
