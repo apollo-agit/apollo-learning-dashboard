@@ -1,4 +1,8 @@
 // Material Theming
+@import '~@angular/material/core/core';
+@import '~@angular/material/core/theming/all-theme';
+
+
 $primary: md-palette($md-blue-grey, A200, A100, A400);
 $accent:  md-palette($md-blue-grey, A200, A100, A400);
 $warn: md-palette($md-orange);

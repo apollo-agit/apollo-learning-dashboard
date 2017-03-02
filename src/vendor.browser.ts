@@ -1,6 +1,3 @@
-// Material Design
-import '@angular/material';
-
 // Angular 2
 import '@angular/platform-browser';
 import '@angular/platform-browser-dynamic';
@@ -23,7 +20,8 @@ import 'bootstrap-loader';
 import 'font-awesome-sass-loader';
 import 'lodash';
 
-
+// Material Design
+import '@angular/material';
 
 // RxJS
 import 'rxjs';

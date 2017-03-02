@@ -60,7 +60,7 @@ module.exports = function (options) {
 
       'polyfills': './src/polyfills.browser.ts',
       'vendor': './src/vendor.browser.ts',
-      'main':      AOT ? './src/main.browser.aot.ts' : './src/main.browser.ts'
+      'main':   './src/main.browser.ts'
     },
 
     /*
@@ -88,6 +88,13 @@ module.exports = function (options) {
      * See: http://webpack.github.io/docs/configuration.html#module
      */
     module: {
+
+   loaders: [ {
+                test: /\forms.main.scss$/,
+                exclude: [/node_modules/],
+                loaders: ["style", "css", "sass"]
+            }
+        ],
 
        rules: [
 
@@ -157,12 +164,14 @@ module.exports = function (options) {
 
         {
           test: /\.scss$/,
-          use: ['raw-loader', { loader: 'sass-loader',
+          use: ['raw-loader',  { loader: 'sass-loader',
           options: {
                     includePaths: ["node_modules/@angular/material/", "node_modules/font-awesome/scss/"]
                 }
               }]
         },
+
+
 
         {
           test: /initial\.scss$/,

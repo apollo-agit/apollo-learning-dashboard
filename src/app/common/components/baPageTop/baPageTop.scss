@@ -25,7 +25,7 @@
 a.al-logo {
   color: $sidebar-text;
   display: block;
-  font-size: 24px;
+
   font-family: $font-family;
   white-space: nowrap;
   float: left;
@@ -156,17 +156,20 @@ a.collapse-menu-link {
   .search {
     display: none;
   }
+
 }
 
 @media screen and (max-width: $resXS) {
   .page-top {
     padding: 0 20px;
+      font-size: 24px;
   }
+  
 }
 
 @media (max-width: $resXXS) {
   .user-profile{
-    min-width: 136px;
+    min-width: 100px;
   }
   a.refresh-data {
     margin-right: 10px;
@@ -177,6 +180,16 @@ a.collapse-menu-link {
 
   .al-skin-dropdown {
     display: none;
+  }
+
+  .al-logo {
+    font-size: 20px;
+  }
+}
+
+@media  (min-width: $resXXS) {
+  .al-logo {
+    font-size: 24px;
   }
 }
 
